@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
       const width = window.innerWidth;
       const height = window.innerHeight;
 
-      if (height < width) {
+      if (height < 600 || width > height) {
         this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE);
       } else {
         this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);

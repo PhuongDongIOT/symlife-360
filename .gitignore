@@ -36,3 +36,4 @@ Thumbs.db
 UserInterfaceState.xcuserstate
 
 cypress/videos
+src/assets/static-html
