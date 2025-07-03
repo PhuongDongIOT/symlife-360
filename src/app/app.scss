@@ -1,4 +1,38 @@
+$iframe-width: 100vw;
+$iframe-height: 100vh;
+$iframe-bg: #fff;
+$iframe-z-index: 999;
+
 [hidden] {
   /* stylelint-disable-next-line declaration-no-important */
   display: none !important;
+}
+
+.hidden {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.iframe-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $iframe-width;
+  height: $iframe-height;
+  background: $iframe-bg;
+  z-index: $iframe-z-index;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: auto;
+}
+
+.iframe-fullscreen {
+  width: $iframe-width;
+  height: $iframe-height;
+  border: none;
 }

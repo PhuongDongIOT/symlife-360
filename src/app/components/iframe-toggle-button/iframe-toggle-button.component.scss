@@ -1,0 +1,40 @@
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 16px;
+  background: #f8f9fa;
+
+  ion-button {
+    --border-radius: 12px;
+    --background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    --color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: none;
+    animation: floatUp 2s ease-in-out infinite;
+    transition: transform 0.3s;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-10px);
+      filter: brightness(1.1);
+    }
+  }
+}

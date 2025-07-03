@@ -1,5 +1,8 @@
 <ion-app>
   <ion-content fullscreen>
-    <iframe src="assets/static-html/index.html" style="width: 100vw; height: 100vh; border: none"></iframe>
+    <app-iframe-toggle-button (toggle)="toggleIframe()"></app-iframe-toggle-button>
+    <div [ngClass]="{ 'iframe-wrapper': showIframe, 'hidden': !showIframe }">
+      <iframe src="assets/static-html/index.html" class="iframe-fullscreen"></iframe>
+    </div>
   </ion-content>
 </ion-app>
